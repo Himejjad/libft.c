@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 21:42:20 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/18 21:42:25 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:53:19 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int ft_isprint(int c)
 }
 int main ()
 {
-    printf("%d\n" , ft_isprint(32));
+    printf("%d\n" , ft_isprint(33));
 }

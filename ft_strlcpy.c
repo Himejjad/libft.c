@@ -25,10 +25,10 @@
     }
     return i;
 }
-int main ()
-{
-    char src [] = "ALLOO";
-    char dst [] = "133742";
-    printf( "%zu",ft_strlcpy(dst, src, 5));
-    // pritnf("%d", ft_strlcpy(i));
-}
+// int main ()
+// {
+//     char src [] = "ALLOO";
+//     char dst [] = "133742";
+//     printf( "%zu",ft_strlcpy(dst, src, 3));
+//     // pritnf("%d", ft_strlcpy(i));
+// }

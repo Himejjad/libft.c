@@ -6,22 +6,22 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 02:24:57 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/07 21:06:41 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:50:28 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+ #include <stdio.h>
+size_t ft_strlen(char *s)
+ {
+    int i;
+    
+    i = 0;
+    while (s[i] != '\0')
+       i++;
+    return i;
+ }
+//  int main ()
+//  {
 
-void  ft_strlen(int *x, int *c)
-{
-    *x = *c;
-    printf("1 - x = %d\tc = %d\n", *x, *c);
-}
-
-int main()
-{
-    int x = 5;
-    int c = 1;
-    ft_strlen(&x, &c);
-    printf("2 - x = %d\tc = %d\n", x, c);
-}
+//     printf("%zu", ft_strlen("allo"));
+//  }

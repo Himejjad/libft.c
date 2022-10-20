@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 22:31:35 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/09 22:33:15 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:52:23 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int ft_isascii(int c)
 }
 int main ()
 {
-    printf("%d" , ft_isascii(1));
+    printf("%d" , ft_isascii(2));
 }

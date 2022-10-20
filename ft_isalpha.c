@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 01:22:04 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/18 18:21:45 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:52:10 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int ft_isalpha(int c)
     else 
         return 0;
 }
-#include <stdio.h>
-int main ()
-{
-    printf("%i" , ft_isalpha('a'));
-}
+// #include <stdio.h>
+// int main ()
+// {
+//     printf("%i" , ft_isalpha('b'));
+// }
