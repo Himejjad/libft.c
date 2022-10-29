@@ -6,40 +6,36 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 00:19:14 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/17 00:13:58 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:36:43 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
- #include <stdio.h>
-  size_t ft_strlen(char *s)
- {
-    int i;
-    i = 0;
-    printf("%s\n", s);
-    while (s[i] != '\0')
-       i++;
-    return i;
+ #include "libft.h"
 
- }
-
-size_t ft_strlcat(char *dst,char *src)
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    int i;
-    int = 0;
-
-    while (src[i] != '\0')
-    {
-        
-
-
-    }
+    size_t i;
+    size_t a = ft_strlen(dst);
     
-} 
-int main ()
-{
-    char dst [] = "qwert";
-    char src [] = "qwerty";
-    printf("%zu \n",ft_strlcat(dst, src));
-    printf("dyelhume = %zu", strlcat(dst, src, 10));
+    i = 0;
+    if (!src[0])
+        return (ft_strlen(dst));
+    if (dstsize <= ft_strlen(dst))
+        return (ft_strlen(src) + dstsize);
+    while(src[i] && i < dstsize - 1)
+    {
+        dst[a] = src[i];
+        i++;
+        a++;
+    }
+    dst[a] = '\0';
+    return (ft_strlen(dst));
 }
+
+// int main ()
+// {
+//     char dst [15] = "a";
+//     char src [] = "abcd";
+//     printf("dyali = %lu \n",ft_strlcat(dst, "lorem ipsum dolor sit amet", 15));
+//     printf("dyalhom = %lu\n", strlcat(dst,  "lorem ipsum dolor sit amet", 15));
+// }

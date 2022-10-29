@@ -1,6 +1,2 @@
 #include <stdio.h>
-
-int main()
-{
-    printf("
-}
+#include "libft.h"

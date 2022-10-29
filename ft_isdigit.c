@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 02:13:55 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/20 20:53:15 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/10/28 16:47:56 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include <stdio.h>
 int ft_isdigit (int i)
 {
-if (i <= 9 && i >= 0)
-return i;
+if (i >= '0' && i <= '9')
+return 1;
 else 
 return (0);
 
@@ -23,7 +23,7 @@ return (0);
 
 // int main ()
 // {
-//     int i = 83;
-//     i = ft_isdigit(i);
+//     int i = NULL;
+//     i = isdigit(i);
 //     printf ("%d\n" , i);
 // }
