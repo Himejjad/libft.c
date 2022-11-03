@@ -6,12 +6,12 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 02:13:55 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/28 16:47:56 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/02 22:59:38 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
+
 int ft_isdigit (int i)
 {
 if (i >= '0' && i <= '9')

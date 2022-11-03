@@ -6,13 +6,13 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:44:11 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/29 01:49:09 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/02 22:58:06 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
+
+
 //  size_t ft_strlen(const char *s)
 //  {
 //     int i;

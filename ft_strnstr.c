@@ -6,43 +6,47 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:42:02 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/28 21:38:05 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/01 00:00:33 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 
-char *ft_strnstr(char *s1, char *s2, size_t len)
+#include "libft.h"
+
+char *ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t i;
 	size_t x;
 	size_t n;
+    char    *s11;
+    char    *s22;
 
 	i = 0;
-	if (s2[i] == '\0')
-	return (&s1[i]);
-	while(s1[i] && i < len - 1)
+    s11 = (char *)s1;
+    s22 = (char *)s2;
+	if (s22[i] == '\0')
+		return (&s11[i]);
+	while(s11[i] && i < len )
 	{
-		if (s1[i] == s2[0])
+		if (s11[i] == s22[0])
 		{
 			x = 0;
 			n = i;
-			while(s1[n] && s2[x] && s1[n] == s2[x])
+			while(s11[n] && s11[x] && s11[n] == s22[x] && n  < len )
 			{
 				n++;
 				x++;
 			}
-			if (s2[x] == '\0')
-				return (&s1[i]);
+			if (s22[x] == '\0')
+				return (&s11[i]);
 		}
 		i++;
 	}
-	return (&s1[i]);
+	return (NULL);
 }
 
 // int main ()
 // {
-// 	printf("dyalhom >>>>>> \n %s \n", strnstr("hello hamza ", "", 4));
-// 	printf("dyali >>>>>> \n %s \n", ft_strnstr("hello hamza ", "", 4));
+// 	printf("dyalhom >>>>>> %s \n",strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+// 	printf("dyali >>>>>>  %s \n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
 // }

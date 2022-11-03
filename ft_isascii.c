@@ -6,12 +6,12 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 22:31:35 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/28 16:50:50 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/02 22:59:44 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
+
 int ft_isascii(int c)
 {
     if (c >= 0 && c <= 0177)

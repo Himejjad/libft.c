@@ -6,11 +6,12 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 01:22:04 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/20 20:52:10 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/02 22:59:51 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
+
 int ft_isalpha(int c)
 {
     if ((c >= 'a' && c <= 'z' )|| (c >= 'A' && c <= 'Z') )

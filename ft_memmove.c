@@ -6,38 +6,35 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:01 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/29 16:16:37 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/02 22:58:42 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+
+
 #include "libft.h"
+
 void * ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned int i;
+    size_t i;
     unsigned char *dst1;
     unsigned char *src1;
 
     i = 0;
     dst1 = (unsigned char *)dst;
     src1 = (unsigned char *)src;
-    while ( i < len)
+    if (dst1 > src1 )
     {
-        dst1[i] = src1[i];
-        i++;
+        while (len--)
+        {
+            dst1[len] = src1[len];   
+        }
+        return (dst1);
     }
-    return (dst1);
+    return (ft_memcpy(dst1,src1,len));
 
 }
-int main ()
-{
-    char dest[] = "AAA";
-    const char src[]  = "";
-    // printf("Before memmove >> dest = %s, src = %s\n\n", dest, src);
-    printf("%s\n", ft_memmove(dest, src, 0));
-    printf("%s", memmove(dest, src, 0));
-
-    // printf("After memmove >> dest = %s, src = %s\n\n", dest, src);
-    return 0;
-}
+// int main()
+// {
+    
+// }

@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 00:19:14 by himejjad          #+#    #+#             */
-/*   Updated: 2022/10/29 15:36:43 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/01 01:09:44 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,31 @@
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
     size_t i;
-    size_t a = ft_strlen(dst);
+    size_t a;
+    char    *src1;
+    int n;
     
     i = 0;
-    if (!src[0])
-        return (ft_strlen(dst));
+    a = ft_strlen(dst);
+    n = a;
+    src1 = (char *)src;
     if (dstsize <= ft_strlen(dst))
         return (ft_strlen(src) + dstsize);
-    while(src[i] && i < dstsize - 1)
+    while(src1[i] && a < dstsize - 1)
     {
-        dst[a] = src[i];
+        dst[a] = src1[i];
         i++;
         a++;
     }
     dst[a] = '\0';
-    return (ft_strlen(dst));
+    return (n + ft_strlen(src));
 }
 
 // int main ()
 // {
-//     char dst [15] = "a";
+//     char dst [14] = "pqrs";
 //     char src [] = "abcd";
-//     printf("dyali = %lu \n",ft_strlcat(dst, "lorem ipsum dolor sit amet", 15));
-//     printf("dyalhom = %lu\n", strlcat(dst,  "lorem ipsum dolor sit amet", 15));
+//     printf("dyali = %lu \n%s\n",ft_strlcat(dst, "abcdefghi", 10), dst);
+//     char dst1 [14] = "pqrs";
+//     printf("dyalhom = %lu \n%s\n", strlcat(dst1,  "abcdefghi", 10), dst1);
 // }
