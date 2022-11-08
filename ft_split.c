@@ -6,78 +6,80 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:47 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/03 01:31:11 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/08 00:41:35 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int count_word(char  *s, char c)
+size_t	count_word(const char *s, char c)
 {
-    int i = 0;
-    int x = 0;
-    while (s[i])
-    {
-        if (s[i] != c && s[i + 1] == c)
-            x++;
-        i++;
-    }
-    if (s[i - 1] != c )
-        x++;
-    return (x);
+	size_t	i;
+	size_t	x;
+
+	i = 0;
+	x = 0;
+	while (s[i])
+	{
+		if ((s[i] != c && s[i + 1] == c) || (s[i + 1] == '\0' && s[i] != c))
+			x++;
+		i++;
+	}
+	return (x);
 }
 
-int  count_caracters(char *s, char c, int pos)
+size_t	count_caracters(const char *s, char c, size_t pos)
 {
-   int i = 0;
+	size_t	i;
 
-   while(s[pos] != c)
-   {
-        pos++;
-        i++;
-   }
-   return (i);
+	i = 0;
+	while (s[pos] != c && s[pos] != '\0')
+	{
+		pos++;
+		i++;
+	}
+	return (i);
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    int x;
-    int i;
-    int pos;
+	size_t		n;
+	size_t		i;
+	size_t		pos;
+	size_t		x;
 	char	**new;
-    char    *s1;
-    int n;
-    
-    i = 0;
-    pos = 0;
-    s1 = (char *)s;
-    x = count_word(s1, c);
+
+	i = 0;
+	pos = 0;
+	x = count_word(s, c);
 	new = malloc(sizeof(char *) * (x + 1));
-    if (!new)
-        return NULL;
-    if (!s1 || !c)
-    return NULL;
-    while(i < x)
-    {
-        while(s1[pos] == c)
-            pos++;
-        n = count_caracters(s1, c, pos);
-        new[i] = ft_substr(s1, pos, n);
-        pos += n;
-        i++;
-    }
-    new[i] = 0;
-    return (new);
+	if (!new)
+		return (NULL);
+	new[x] = NULL;
+	size_t j = 0;
+	while (s[i] && j < x)
+	{
+		while (s[pos] == c)
+			pos++;
+		n = count_caracters(s, c, pos);
+		new[i] = ft_substr(s, pos, n);
+		pos += n;
+		i++;
+		j++;
+	}
+	return (new);
 }
 
 // int main()
 // {
-//     char **sp = ft_split("hamza     bk     papap a jidajdjijdi ajioda dhadh ahduha uadh adijbajbd ijijbdab  hamza", ' ');
-//     int i = 0;
-//     while(sp[i])
-//     {
-//         printf("|%s|\n", sp[i]);
-//         i++;
-//     }
-// }
+//     char **tab ;
+// 	tab = ft_split("tripouille!", 0);
+// 	if (tab)
+// 		strcmp(tab[0], "tripouille!") ? printf("false") : printf("true");
+// 	system("leaks a.out");
+	// int i = 0 ;
+	// while(tab[i])
+	// {
+	// 	printf("strings |%d| : |%s|\n",i,tab[i]);
+	// 	i++;
+	// }

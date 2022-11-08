@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:44:45 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/02 23:30:25 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/04 18:06:13 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,3 @@ size_t ft_strlcpy(char * dst, const char * src, size_t dstsize);
 size_t ft_strlen(const char *s);
 
 #endif
-
-
-
-
-
-
-
-
-
-
