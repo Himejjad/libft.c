@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:44:32 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/03 02:28:16 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/10 02:04:16 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t i;
+    unsigned int i;
     char *s1;
     char *new;
 
@@ -41,12 +41,12 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 }
 // int main()
 // {
-// 	char src[] = "substrjfunction Implementation";
+// 	// char src[] = "substrjfunction Implementation";
 
-// 	int m = 7;
-// 	int n = 12;
+// 	// int m = 7;
+// 	// int n = 12;
 
-// 	char* dest = ft_substr(src, m, n);
+// 	// char* dest = ft_substr(src, m, n);
 
-// 	printf("%s\n", dest);
+// 	// printf("%s\n", ft_substr("hola", 2, 30));
 // }

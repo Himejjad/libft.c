@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:51 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/07 23:59:57 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/10 02:22:05 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char *ft_strchr(const char *s, int c)
     return (NULL);
 }
 
-int main()
-{
-    int c = 0;
-    char a [] = "hamza al";
+// int main()
+// {
+//     // int c = 0;
+//     // char a [] = "hamza al";
     
-    printf("%s\n", ft_strchr(a, c));
-}
+//     printf("%s\n", ft_strchr("teste", 'e'));
+// }

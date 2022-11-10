@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:47 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/08 00:41:35 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/09 23:30:30 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ size_t	count_caracters(const char *s, char c, size_t pos)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t		n;
+	size_t		co;
 	size_t		i;
 	size_t		pos;
 	size_t		x;
@@ -57,13 +57,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	new[x] = NULL;
 	size_t j = 0;
-	while (s[i] && j < x)
+	while (j < x)
 	{
 		while (s[pos] == c)
 			pos++;
-		n = count_caracters(s, c, pos);
-		new[i] = ft_substr(s, pos, n);
-		pos += n;
+		co = count_caracters(s, c, pos);
+		new[i] = ft_substr(s, pos, co);
+		pos += co;
 		i++;
 		j++;
 	}

@@ -6,28 +6,12 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:44:11 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/02 22:58:06 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/09 23:31:12 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-//  size_t ft_strlen(const char *s)
-//  {
-//     int i;
-//     i = 0;
-//     while (s[i] != '\0')
-//        i++;
-//     return i;
-
-//  }
-
-//  int main ()
-//  {
-// char i[] = "allo";
-// printf("%zu", ft_strlen(i));
-//  }
 size_t ft_strlcpy(char * dst, const char * src, size_t dstsize)
 {
     size_t i;

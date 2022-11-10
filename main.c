@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 21:47:55 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/06 21:48:55 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/09 01:28:23 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int main()
 {
-    
+    int fd;
+
+    fd = open("file.txt", O_WRONLY);
+    ft_putnbr_fd(45, fd);
 }
