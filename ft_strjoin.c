@@ -6,43 +6,35 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:57 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/09 23:30:53 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:37:33 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char    *s11;
-    char    *s22;
-    char    *join;
-    int i;
-    int x;
+	char	*join;
+	int		i;
+	int		x;
 
-    x = 0;
-    s11 = (char *)s1;
-    s22 = (char *)s2;
-    i = ft_strlen(s11) + ft_strlen(s22);
-    join = malloc(sizeof(char) * (i + 1));
-    if (!join)
-        return (NULL);
-    while(s11[x])
-    {
-        join[x] = s11[x];
-        x++;
-    }
-    i = 0;
-    while (s22[i])
-        join[x++] = s22[i++];
-    join[x] = '\0';
-    return (join);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	else if (!s1 && !s2)
+		return (NULL);
+	x = 0;
+	i = ft_strlen(s1) + ft_strlen(s2);
+	join = malloc(sizeof(char) * (i + 1));
+	if (!join)
+		return (NULL);
+	while (s1[x])
+	{
+		join[x] = s1[x];
+		x++;
+	}
+	i = 0;
+	while (s2[i])
+		join[x++] = s2[i++];
+	join[x] = '\0';
+	return (join);
 }
-// int main()
-// {
-//     char a[] = "";
-//     char b[] = "";
-//     printf("%s\n", ft_strjoin(a, b));
-// }

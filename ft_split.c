@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:47 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/09 23:30:30 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:37:13 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,14 @@ size_t	count_caracters(const char *s, char c, size_t pos)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t		co;
-	size_t		i;
-	size_t		pos;
-	size_t		x;
 	char	**new;
+	size_t	co;
+	size_t	i;
+	size_t	pos;
+	size_t	x;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	pos = 0;
 	x = count_word(s, c);
@@ -56,8 +58,7 @@ char	**ft_split(char const *s, char c)
 	if (!new)
 		return (NULL);
 	new[x] = NULL;
-	size_t j = 0;
-	while (j < x)
+	while (i < x)
 	{
 		while (s[pos] == c)
 			pos++;
@@ -65,21 +66,6 @@ char	**ft_split(char const *s, char c)
 		new[i] = ft_substr(s, pos, co);
 		pos += co;
 		i++;
-		j++;
 	}
 	return (new);
 }
-
-// int main()
-// {
-//     char **tab ;
-// 	tab = ft_split("tripouille!", 0);
-// 	if (tab)
-// 		strcmp(tab[0], "tripouille!") ? printf("false") : printf("true");
-// 	system("leaks a.out");
-	// int i = 0 ;
-	// while(tab[i])
-	// {
-	// 	printf("strings |%d| : |%s|\n",i,tab[i]);
-	// 	i++;
-	// }

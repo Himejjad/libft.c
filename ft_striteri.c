@@ -6,33 +6,23 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:54 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/09 23:30:42 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:37:29 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void abc(unsigned int i, char *c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    i = 0;
-    c[i] += 1;
+	unsigned int	i;
+
+	i = 0;
+	if (s)
+	{
+		while (s[i])
+		{
+			f(i, &s[i]);
+			i++;
+		}
+	}
 }
-
-void ft_striteri(char *s, void (*f)(unsigned int,char*))
-{
-    unsigned int  i;
-
-    i = 0;
-
-    while (s[i])
-    {
-        f(i, &s[i]);
-        i++;
-    }
-}
-// int main()
-// {
-//     char a[] = "abc";
-//     ft_striteri(a, &abc);
-//     printf("---%s\n", a);
-// }

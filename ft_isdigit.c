@@ -6,24 +6,16 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 02:13:55 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/09 23:15:09 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:36:20 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit (int i)
+int	ft_isdigit(int i)
 {
-if (i >= '0' && i <= '9')
-return 1;
-else 
-return (0);
-
+	if (i >= '0' && i <= '9')
+		return (1);
+	else
+		return (0);
 }
-
-// int main ()
-// {
-//     int i = NULL;
-//     i = isdigit(i);
-//     printf ("%d\n" , i);
-// }

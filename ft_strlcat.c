@@ -5,41 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 00:19:14 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/09 23:30:57 by himejjad         ###   ########.fr       */
+/*   Created: 2022/10/14 00:19:14 by himejjjd          #+#    #+#             */
+/*   Updated: 2022/11/12 20:37:38 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "libft.h"
+#include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t i;
-    size_t a;
-    char    *src1;
-    int n;
-    
-    i = 0;
-    a = ft_strlen(dst);
-    n = a;
-    src1 = (char *)src;
-    if (dstsize <= ft_strlen(dst))
-        return (ft_strlen(src) + dstsize);
-    while(src1[i] && a < dstsize - 1)
-    {
-        dst[a] = src1[i];
-        i++;
-        a++;
-    }
-    dst[a] = '\0';
-    return (n + ft_strlen(src));
-}
+	char	*src1;
+	size_t	i;
+	size_t	j;
+	size_t	x;
 
-// int main ()
-// {
-//     char dst [14] = "pqrs";
-//     char src [] = "abcd";
-//     printf("dyali = %lu \n%s\n",ft_strlcat(dst, "abcdefghi", 10), dst);
-//     char dst1 [14] = "pqrs";
-//     printf("dyalhom = %lu \n%s\n", strlcat(dst1,  "abcdefghi", 10), dst1);
-// }
+	i = 0;
+	j = ft_strlen(dst);
+	x = j;
+	src1 = (char *)src;
+	if (dstsize <= ft_strlen(dst))
+		return (ft_strlen(src) + dstsize);
+	while (src1[i] && j < dstsize - 1)
+	{
+		dst[j] = src1[i];
+		j++;
+		i++;
+	}
+	dst[j] = '\0';
+	return (x + ft_strlen(src));
+}

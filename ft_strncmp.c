@@ -6,36 +6,24 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:31:32 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/09 23:32:04 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:37:54 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "libft.h"
+#include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
-
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-   size_t i;
-   unsigned char *s11;
-   unsigned char *s22;
+	unsigned char	*s11;
+	size_t			i;
+	unsigned char	*s22;
 
-
-   i = 0;
-   
-   s11 = (unsigned char *)s1;
-   s22 = (unsigned char *)s2;
-
-   if (n == 0)
-   return 0;
-   while ((s11[i] && s22[i]) && (i < n - 1) && (s11[i] == s22[i]))
-      i++;
-   return (s11[i] - s22[i]);
+	i = 0;
+	s11 = (unsigned char *)s1;
+	s22 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while ((s11[i] && s22[i]) && (i < n - 1) && (s11[i] == s22[i]))
+		i++;
+	return (s11[i] - s22[i]);
 }
-
-// int main ()
-// {
-// char s1[] = "abc\375def";
-// char s2[] = "abcxx";
-// printf("dyali : %d \n", ft_strncmp(s1,s2, 5));
-// printf("dyalhom : %d\n", strncmp(s1,s2, 5));
-// }

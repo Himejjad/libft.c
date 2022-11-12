@@ -6,21 +6,16 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 01:22:04 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/09 23:14:55 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:36:12 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c >= 'a' && c <= 'z' )|| (c >= 'A' && c <= 'Z') )
-        return 1;
-    else 
-        return 0;
+	if ((c >= 'a' && c <= 'z' ) || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
-// #include <stdio.h>
-// int main ()
-// {
-//     printf("%i" , ft_isalpha('b'));
-// }
