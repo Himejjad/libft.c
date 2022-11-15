@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:42:13 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/12 20:35:57 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/14 04:33:10 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	unsigned int	result;
+	unsigned long	result;
 	int				i;
 	int				sign;
 
@@ -34,5 +34,9 @@ int	ft_atoi(const char *str)
 		result = result * 10 + str[i] - 48;
 		i++;
 	}
+	if (result > 9223372036854775807 && sign == 1)
+		return (-1);
+	if (result > 9223372036854775807 && sign == -1)
+		return (0);
 	return (result * sign);
 }

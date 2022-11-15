@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:42:53 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/12 20:36:46 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/14 00:18:31 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+// int main()
+// {
+// 	printf("%s",memcpy("test", "test",4));
+// }

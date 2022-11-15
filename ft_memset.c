@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:23 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/12 20:36:53 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/14 03:55:31 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	b1 = (unsigned char *)b;
 	while (i < len)
 	{
-		b1[i] = c;
+		b1[i] = (unsigned char)c;
 		i++;
 	}
 	return (b1);

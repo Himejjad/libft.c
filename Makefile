@@ -6,11 +6,15 @@
 #    By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 23:14:14 by himejjad          #+#    #+#              #
-#    Updated: 2022/11/12 20:47:34 by himejjad         ###   ########.fr        #
+#    Updated: 2022/11/12 22:02:43 by himejjad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+RM		= rm -f
+
+CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_isdigit.c ft_memset.c ft_strjoin.c ft_strtrim.c ft_isprint.c\
 ft_putchar_fd.c ft_strlcat.c ft_substr.c ft_itoa.c ft_putendl_fd.c\
@@ -22,18 +26,11 @@ ft_strnstr.c ft_isascii.c ft_memmove.c ft_strdup.c ft_strrchr.c\
 
 OBJS = ${SRCS:.c=.o}
 
-CC		= cc
-RM		= rm -f
-
-CFLAGS = -Wall -Wextra -Werror
-
-.o : .c
-		${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
 
 all: $(NAME)
 
-$(NAME): ${OBJS}
-		ar rcs ${NAME} ${OBJS}
+$(NAME): ${OBJS} 
+		ar rc ${NAME} ${OBJS}
 
 clean:
 	${RM} ${OBJS}
@@ -42,3 +39,5 @@ fclean:	clean
 		${RM} ${NAME}
 
 re:		fclean all
+
+.PHONY : clean fclean all re

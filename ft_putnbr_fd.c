@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:16:00 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/12 20:37:05 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/14 04:34:21 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ void	ft_putnbr_fd(int nb, int fd)
 	else
 		ft_putchar_fd(nb + 48, fd);
 }
-// int main()
-// {
-//     int fd;
-
-//     fd = open("file.txt", O_WRONLY);
-//     ft_putnbr_fd(2147483647, fd);
-// }

@@ -6,7 +6,7 @@
 /*   By: himejjad <himejjad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:43:47 by himejjad          #+#    #+#             */
-/*   Updated: 2022/11/12 20:37:13 by himejjad         ###   ########.fr       */
+/*   Updated: 2022/11/14 20:28:33 by himejjad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ size_t	count_caracters(const char *s, char c, size_t pos)
 		pos++;
 		i++;
 	}
+	printf("%s", pos[i]);
 	return (i);
 }
 
